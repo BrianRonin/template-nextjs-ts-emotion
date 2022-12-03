@@ -36,6 +36,6 @@ export const Template: Story<TextProps> = (
 
 Template.parameters = {
   backgrounds: {
-    default: 'light',
+    disable: true,
   },
 }

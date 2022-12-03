@@ -1,7 +1,6 @@
 import {
   css,
   Global,
-  ThemeContext,
   useTheme,
 } from '@emotion/react'
 

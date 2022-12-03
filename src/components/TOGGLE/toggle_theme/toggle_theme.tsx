@@ -1,6 +1,6 @@
 import * as S from './S.toggle_theme'
 import { Toggle } from '../toggle/toggle'
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import { theme_context } from '../../../contexts/theme/theme'
 import { if_window } from '../../../utils/is-window'
 

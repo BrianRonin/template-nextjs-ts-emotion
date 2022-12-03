@@ -4,7 +4,7 @@ export const DefaultTheme = {
     primary: '#000000',
     secondary: '#dc143c',
     text: '#333333',
-    bg: '#0000',
+    bg: '#ffffff',
     primaryBg: '#0A1128',
     secondaryBg: 'white',
     darkBg: '#0A1128',

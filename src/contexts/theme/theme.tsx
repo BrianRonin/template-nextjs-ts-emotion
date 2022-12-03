@@ -12,6 +12,7 @@ import { DefaultTheme } from '../../styles/theme/default'
 
 export type theme_provider_props = {
   children: ReactNode
+  _theme?: typeof DefaultTheme
 }
 
 export type theme_context_values = {
@@ -27,8 +28,11 @@ export const theme_context =
 
 export const Theme = ({
   children,
+  _theme,
 }: theme_provider_props) => {
-  const [theme, setTheme] = useState(DefaultTheme)
+  const [theme, setTheme] = useState(
+    _theme ? _theme : DefaultTheme,
+  )
 
   useEffect(() => {
     const localTheme =
