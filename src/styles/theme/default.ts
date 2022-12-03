@@ -1,20 +1,21 @@
-export default {
+export const DefaultTheme = {
   name: 'default',
   colors: {
     primary: '#000000',
-    darkText: '#333333',
     secondary: '#dc143c',
-    mainBg: '#0A1128',
-    lightBg: 'white',
-    secondaryBg: 'cyan',
+    text: '#333333',
+    bg: '#0000',
+    primaryBg: '#0A1128',
+    secondaryBg: 'white',
+    darkBg: '#0A1128',
     white: '#FFFFFF',
     mediumGray: '#DDDDDD',
     darkGray: '#4f4f4fff',
-    darkBg: '#0A1128',
   },
   fonts: {
     family: {
-      default: "'Open Sans', sans-serif",
+      default:
+        'Zen Dots, roboto, Open Sans, sans-serif',
     },
     sizes: {
       xsmall: '8rem',

@@ -1,3 +1,16 @@
+import { Base } from '../templates/Base/Base'
+
 export default function Home() {
-  return <h1>ok</h1>
+  return (
+    <Base>
+      <div
+        style={{
+          textAlign: 'center',
+          marginTop: '10rem',
+        }}
+      >
+        <h1>Good luck 👻</h1>
+      </div>
+    </Base>
+  )
 }

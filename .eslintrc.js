@@ -42,6 +42,7 @@ module.exports = {
     'import/no-anonymous-default-export': 0,
     'react/no-children-prop': 0,
     '@typescript-eslint/ban-ts-comment': 0,
+    'no-unused-vars': 0,
     'react/no-unknown-property': [
       'error',
       { ignore: ['css'] },

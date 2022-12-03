@@ -1,16 +1,23 @@
 import type { AppProps } from 'next/app'
 import { GlobalStyles } from '../styles/globals'
-import { ThemeProvider } from '@emotion/react'
-import Theme from '../styles/theme/default'
+import { Roboto } from '@next/font/google'
+import { Theme } from '../contexts/theme/theme'
+const myFont = Roboto({
+  style: ['normal', 'italic'],
+  weight: ['100', '300', '500', '900'],
+  subsets: ['latin'],
+})
 
 export default function App({
   Component,
   pageProps,
 }: AppProps) {
   return (
-    <ThemeProvider theme={Theme}>
+    <Theme>
       <GlobalStyles />
-      <Component {...pageProps} />
-    </ThemeProvider>
+      <main className={myFont.className}>
+        <Component {...pageProps} />
+      </main>
+    </Theme>
   )
 }

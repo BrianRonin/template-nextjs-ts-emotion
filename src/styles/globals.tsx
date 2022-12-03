@@ -1,7 +1,13 @@
-import { css, Global } from '@emotion/react'
-import theme from '../styles/theme/default'
+import {
+  css,
+  Global,
+  ThemeContext,
+  useTheme,
+} from '@emotion/react'
 
 export const GlobalStyles = () => {
+  const theme = useTheme()
+
   return (
     <Global
       styles={css`
@@ -15,11 +21,9 @@ export const GlobalStyles = () => {
           scroll-behavior: smooth;
         }
         body {
-          background: ${theme.colors.mainBg};
+          background: ${theme.colors.bg};
           font-size: 16px;
-          font-family: ${theme.fonts.family
-            .default};
-          color: ${theme.colors.darkText};
+          color: ${theme.colors.text};
         }
         h1,
         h2,
@@ -27,10 +31,8 @@ export const GlobalStyles = () => {
         h4,
         h5,
         h6 {
-          font-family: ${theme.fonts.family
-            .default};
+          font-weight: 300;
           margin: ${theme.spacings.large} 0;
-          font-weight: 800;
           color: ${theme.colors.primary};
         }
       `}

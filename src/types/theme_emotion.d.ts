@@ -1,6 +1,6 @@
-import theme from '../styles/theme/default'
+import { DefaultTheme } from '../styles/theme/default'
 
-type tTheme = typeof theme
+type tTheme = typeof DefaultTheme
 
 declare module '@emotion/react' {
   /* eslint-disable @typescript-eslint/no-empty-interface */
