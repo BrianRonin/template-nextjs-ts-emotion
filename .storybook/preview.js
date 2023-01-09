@@ -3,30 +3,37 @@ import { withThemes } from '@react-theming/storybook-addon'
 import { DefaultTheme } from '../src/styles/theme/default'
 import { dark_theme } from '../src/styles/theme/dark'
 import { ThemeProvider } from '@emotion/react'
-
-// import { GlobalStyles } from '../src/styles/globals'
+import { GlobalStyles } from '../src/styles/globals'
 // import { Theme } from '../src/contexts/theme/theme'
+
 // import styled from '@emotion/styled'
 // const background = styled.div`
 //   background-color: red !important;
 //   color: red !important;
 // `
-// const ProviderTheme = ({ theme, children }) => {
-//   return (
-//     <Theme _theme={theme}>
-//       <background></background>
-//       <GlobalStyles />
-//       {children}
-//     </Theme>
-//   )
+
+const ProviderTheme = ({ theme, children }) => {
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      {children}
+    </ThemeProvider>
+  )
+}
+
+// const getCustomFieldSnippet = (selectedValue) => {
+//   const { namespace, name } = selectedValue
+//   const path = namespace.join('.')
+//   const fullPath = `${path}.${name}`
+//   const themeProp = `\${({ theme }) => theme.${fullPath}}`
+//   return themeProp
 // }
 
 export const onThemeSwitch = (context) => {
   const { theme } = context
-  console.log(context)
   const parameters = {
     backgrounds: {
-      default: theme.colors.bg,
+      default: theme.colors.bg[0],
     },
 
     // Pass backgrounds: null to disable background switching at all
@@ -38,7 +45,7 @@ export const onThemeSwitch = (context) => {
 
 addDecorator(
   withThemes(
-    ThemeProvider,
+    ProviderTheme,
     [DefaultTheme, dark_theme],
     {
       onThemeSwitch,

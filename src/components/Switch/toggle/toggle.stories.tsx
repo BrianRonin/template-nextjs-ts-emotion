@@ -6,7 +6,7 @@ import { Toggle, toggleProps } from './toggle'
 import { mock_toggle } from './M.toggle'
 
 export default {
-  title: 'components/toggle',
+  title: 'components/Toggle/Toggle_0',
   component: Toggle,
   args: mock_toggle,
 } as Meta

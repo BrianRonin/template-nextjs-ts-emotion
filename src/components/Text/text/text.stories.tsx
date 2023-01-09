@@ -5,7 +5,7 @@ import {
 import { Text, TextProps } from './text'
 
 export default {
-  title: 'components/Text',
+  title: 'components/Text/Text_0',
   component: Text,
   args: {
     children: `

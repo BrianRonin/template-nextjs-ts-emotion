@@ -10,6 +10,7 @@ export const GlobalStyles = () => {
   return (
     <Global
       styles={css`
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
         * {
           margin: 0;
           padding: 0;
@@ -17,12 +18,13 @@ export const GlobalStyles = () => {
         }
         html {
           font-size: 62.5%;
+          font-family: 'Roboto', sans-serif;
           scroll-behavior: smooth;
         }
         body {
-          background: ${theme.colors.bg};
+          background: ${theme.colors.bg[0]};
           font-size: 16px;
-          color: ${theme.colors.text};
+          color: ${theme.colors.text[4]};
         }
         h1,
         h2,
@@ -32,7 +34,6 @@ export const GlobalStyles = () => {
         h6 {
           font-weight: 300;
           margin: ${theme.spacings.large} 0;
-          color: ${theme.colors.primary};
         }
       `}
     />
